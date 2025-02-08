@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon File Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Neon File Manager</h1>
+    
+    <!-- File Upload Section -->
+    <input type="file" id="fileInput">
+    <button onclick="uploadFile()">Upload File</button>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchBar" placeholder="Search Files..." oninput="filterFiles()">
+
+    <!-- File Categories -->
+    <div class="categories">
+        <button onclick="filterCategory('all')">All</button>
+        <button onclick="filterCategory('image')">Images</button>
+        <button onclick="filterCategory('video')">Videos</button>
+        <button onclick="filterCategory('audio')">Audio</button>
+        <button onclick="filterCategory('other')">Others</button>
+    </div>
+
+    <!-- File List Container -->
+    <div id="fileList" class="file-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
